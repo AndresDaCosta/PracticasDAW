@@ -16,6 +16,7 @@ namespace FiguraMenos
             for (int i = 5; i >= 1; i--)
             {
 
+                //este metodo de string quita el caracter de valor i
                 cadena = cadena.Remove(i);
 
                 Console.WriteLine(cadena);
