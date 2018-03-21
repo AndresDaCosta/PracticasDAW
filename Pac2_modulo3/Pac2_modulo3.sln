@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguraMenos", "FiguraMenos\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraMenu", "CalculadoraMenu\CalculadoraMenu.csproj", "{30D1346A-3DFE-48D2-880A-E76289804884}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablasDeMultiplicar", "TablasDeMultiplicar\TablasDeMultiplicar.csproj", "{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{30D1346A-3DFE-48D2-880A-E76289804884}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30D1346A-3DFE-48D2-880A-E76289804884}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30D1346A-3DFE-48D2-880A-E76289804884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
