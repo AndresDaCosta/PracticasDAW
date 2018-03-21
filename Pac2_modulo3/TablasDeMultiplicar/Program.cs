@@ -13,6 +13,7 @@ namespace TablasDeMultiplicar
 
             /*Realiza un programa que escriba las tablas de multiplicar del 1 al 10*/
 
+            //bucle automatico para las tablas 
             for(int i = 1; i <= 10; i++)
             {
                 Console.WriteLine("******Tabla de multiplicar del " + i + " ************");

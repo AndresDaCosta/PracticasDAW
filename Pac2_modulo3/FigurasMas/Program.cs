@@ -16,6 +16,7 @@ namespace FigurasMas
             for(int i = 0; i <= 5; i++)
             {
 
+                //añade un nuevo caracter.
                 cadena = cadena.Insert(i, "*");
 
                 Console.WriteLine(cadena);
