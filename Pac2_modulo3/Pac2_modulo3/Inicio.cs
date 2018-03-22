@@ -17,18 +17,21 @@ namespace Pac2_modulo3
 
         static void Main(string[] args)
         {
+
+            //declaramos variables necesarias 
             int Numero_in = new int();
             int calculo = new int();
             int calculo2 = new int();
             Boolean confir = new Boolean();
 
+            //pedimos el numero de entrada
             Console.WriteLine("Introduzca el Numero deseado");
 
 
             Numero_in = int.Parse(Console.ReadLine());
             
             //bucle que identifica los multiplos 
-
+                        
             for (int i = 1;  i <= 13; i++)
             {
                 calculo = Numero_in % i;   //calculo de un multiplo
@@ -38,6 +41,7 @@ namespace Pac2_modulo3
                 {
                     switch (i)
                     {
+                        //casos que iran contando si son multiplos de los numeros 
 
                         case 2:
                             Console.WriteLine("es multiplo de 2");
@@ -62,6 +66,7 @@ namespace Pac2_modulo3
                     switch (i)
                     {
 
+                        //añadimos otro Switch para mostrar en pantalla que no es multiplo de es numero
                         case 2:
                             Console.WriteLine("no es multiplo de 2");
                             break;
