@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraMenu", "Calculad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablasDeMultiplicar", "TablasDeMultiplicar\TablasDeMultiplicar.csproj", "{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrecioProducto", "PrecioProducto", "{09183ED6-D77F-4F17-B723-CADEDCB5C431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecioProducto", "PrecioProducto\PrecioProducto.csproj", "{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,10 @@ Global
 		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,7 @@ Global
 		{C1562143-8A65-4164-860F-6F219929CE11} = {2B766C98-9A0E-466E-9E04-A614C796E8DA}
 		{F5C5561D-C98D-451E-B935-791CE94CA16D} = {357FCD16-7674-447A-BB8A-626F0140C4FC}
 		{22DE2750-D89D-4C90-B255-C9E1CB983705} = {A746CB59-0E98-43DC-B5C7-C51E14C61619}
+		{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21} = {09183ED6-D77F-4F17-B723-CADEDCB5C431}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9778A028-C8B3-4007-AC87-DF508A0F2C5B}
