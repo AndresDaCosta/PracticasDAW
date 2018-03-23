@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculo_Multiplos", "Pac2_modulo3\Calculo_Multiplos.csproj", "{8F15E96A-F9D4-4CEB-8017-57E327AE4ADA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculo multiplos", "Calculo multiplos", "{566CFFFA-475F-43FA-A1CA-AC71771F525A}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PositivoNegativo", "PositivoNegativo", "{2B766C98-9A0E-466E-9E04-A614C796E8DA}"
 EndProject
@@ -30,6 +33,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablasDeMultiplicar", "TablasDeMultiplicar\TablasDeMultiplicar.csproj", "{3E562598-761B-45E5-BBE5-EB92FB8A1DE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrecioProducto", "PrecioProducto", "{09183ED6-D77F-4F17-B723-CADEDCB5C431}"
+	ProjectSection(SolutionItems) = preProject
+		Readme2.txt = Readme2.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrecioProducto", "PrecioProducto\PrecioProducto.csproj", "{0DFCCAD0-EBDB-4F4D-A1E0-892F8BFD3E21}"
 EndProject
