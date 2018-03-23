@@ -11,8 +11,11 @@ namespace FigurasMas
         static void Main(string[] args)
         {
 
+            //cadena vacia para añadirle caracteres
             String cadena = "";
-                    
+            
+            //Bucle ascendente con un indice maximo 5
+
             for(int i = 0; i <= 5; i++)
             {
 
@@ -23,6 +26,7 @@ namespace FigurasMas
 
             }
 
+            //fin del programa 
             Console.ReadLine();
 
 

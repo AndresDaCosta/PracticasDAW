@@ -92,6 +92,7 @@ namespace Pac2_modulo3
                 
             }
 
+            //fin del programa 
             Console.WriteLine("presiona cualquier tecla para acabar ");
             Console.ReadLine();
         }

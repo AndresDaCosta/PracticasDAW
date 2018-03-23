@@ -10,9 +10,10 @@ namespace FiguraMenos
     {
         static void Main(string[] args)
         {
-
+            //cadena completa maxima
             String cadena = "******";
 
+            //bucle descendente con indice maximo 5
             for (int i = 5; i >= 1; i--)
             {
 
@@ -23,6 +24,7 @@ namespace FiguraMenos
 
             }
 
+            //fin del programa 
             Console.ReadLine();
 
 
