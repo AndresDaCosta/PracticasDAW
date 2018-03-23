@@ -47,7 +47,7 @@ namespace CalculadoraMenu
             {
                 /*Casos de la calculadora*/
 
-                //Suma
+                //Suma sadsdasd
                 case 1:
 
                     Resultado = Num1 + Num2_2;
