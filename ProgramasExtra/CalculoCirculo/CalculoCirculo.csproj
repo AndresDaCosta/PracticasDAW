@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8BCC4398-F6EE-42DC-84E5-6115ED409044}</ProjectGuid>
+    <ProjectGuid>{30BE0466-CD5D-4D83-9A3E-92BC2F72D0E7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CalculoCirculo</RootNamespace>
     <AssemblyName>CalculoCirculo</AssemblyName>

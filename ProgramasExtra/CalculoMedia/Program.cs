@@ -10,9 +10,10 @@ namespace CalculoMedia
     {
         static void Main(string[] args)
         {
+
             /*
-           - programa que calcula la media de tres numero que introduce el ususario
-           */
+            - programa que calcula la media de tres numero que introduce el ususario
+            */
 
             //declares variables 
             int Num_1 = new int();
@@ -42,6 +43,8 @@ namespace CalculoMedia
 
             Console.WriteLine("pulsa cualquier tecla para acabar.......");
             Console.ReadLine();
+
+
 
         }
     }
