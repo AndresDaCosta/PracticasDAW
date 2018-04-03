@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaAleatorios", "Pac3_mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NegativosPositivos", "ParesImparesArray\NegativosPositivos.csproj", "{185266B9-D35D-401E-A3E5-78C2D7267A8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadenaCaracteres", "CadenaCaracteres\CadenaCaracteres.csproj", "{51EF21AE-C879-491A-907C-3AD7646CD912}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{185266B9-D35D-401E-A3E5-78C2D7267A8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{185266B9-D35D-401E-A3E5-78C2D7267A8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{185266B9-D35D-401E-A3E5-78C2D7267A8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51EF21AE-C879-491A-907C-3AD7646CD912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51EF21AE-C879-491A-907C-3AD7646CD912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51EF21AE-C879-491A-907C-3AD7646CD912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51EF21AE-C879-491A-907C-3AD7646CD912}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
