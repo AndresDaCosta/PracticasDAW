@@ -29,20 +29,23 @@ namespace Multidimension
 
                 }
                 
-
+                //se devuelve la matriz rellenada
             }
+
+
+            // bucle de calculo de numeros primos
             for (int i = 0; i < 10; i++)
             {
-
+                //bucle para recorrer la matriz 
                 for (int x = 0; x < 10; x ++)
                 {
                      
                    for(int y = 1; y <= 100; y ++)
                     {
-
+                        //calculador de numeros primos si la division no es decimal suma contador
                         if((matriz[i,x]%y) == 0)
                         {
-                            
+                            //contador simple que previamente se creo para esta funcion
                             contador++;
                         }
 
@@ -50,14 +53,17 @@ namespace Multidimension
                     }
 
 
-
+                   // control de numeros primos si contador es mayor que dos que se interpretaria como que ese numero
+                   // es dvisible por mas numero que si mismo y 1 pues se dicta que no es primo por tanto se marca con 
+                   // un char x
                    if(contador > 2)
                     {
-
+                        //se sustitulle por char x el numero inspeccionado 
                         matriz[i, x] = 'x';
 
                     }
 
+                   //se resetea el contador cada vez que acaba todo el proceso
                     contador = 0;
 
                 }
@@ -66,13 +72,13 @@ namespace Multidimension
             }
 
             
-
+            //bucle para mostrar la matriz 
             for(int i = 0; i < 10; i++)
             {
 
                 for(int x = 0; x < 10; x++)
                 {
-
+                    //dado que el char en el matriz se ha representado en un numero se crea un if para representarlo.
                     if(matriz[i,x] == 120)
                     {
 
@@ -81,7 +87,7 @@ namespace Multidimension
                     }
                     else
                     {
-
+                        //si no es el numero 120 se muestra el numero que ocupa.
                         Console.Write(" " + matriz[i, x] + " ");
 
                     }
