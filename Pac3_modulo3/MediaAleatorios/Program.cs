@@ -12,7 +12,8 @@ namespace MediaAleatorios
         {
 
             /*Realiza un programa que tenga un array de 10 números aleatorios, y muestre su
-                suma y la media de estos números.                */
+                suma y la media de estos números.
+                */
 
             //Declaramos las variable que necesitamos.
             Random Numero = new Random(); //tipo random para numeros aleoatrios
