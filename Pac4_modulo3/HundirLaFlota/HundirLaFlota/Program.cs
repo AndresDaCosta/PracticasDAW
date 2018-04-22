@@ -11,16 +11,17 @@ namespace HundirLaFlota
         static void Main(string[] args)
         {
             
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i <= 10; i++)
             {
 
-                Console.WriteLine("##############################################");
-                Console.WriteLine("#  " + "  #  " + "  #  " + "  #  " + "  #  " + "  #  " + "  #  " + "  #  " + "  #  " + "  #");
-                
+                Console.WriteLine("------------------------------------------------");
+                Console.WriteLine("| " + i + "  |  " + "  |  " + "  |  " + "  |  " + "  |  " + "  |  " + "  |  " + "  |  " + " | " + "  |");
+
+
 
 
             }
-            Console.WriteLine("##############################################");
+            Console.WriteLine("------------------------------------------------");
             Console.ReadLine();
 
 
