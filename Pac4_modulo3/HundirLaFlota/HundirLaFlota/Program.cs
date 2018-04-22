@@ -10,7 +10,7 @@ namespace HundirLaFlota
     {
         static void Main(string[] args)
         {
-            /*programa hundir la flota*/
+            /*programa hundir la flota*/ 
 
             /*Output de la primera posicion*/
           
