@@ -16,7 +16,7 @@ namespace HundirLaFlota
 
 
             char[,] tablero = new char[11, 8];
-            char[] letras = { 'A', 'B', 'C', 'D', 'F', 'G', 'H' };
+            char[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' };
             int count = 0;
             int corB = 0;
             /*barcos*/
@@ -87,14 +87,20 @@ namespace HundirLaFlota
             
             /*procedemos a marcar los barcos*/
             
-            Console.WriteLine("barcos disponibles");
-            Console.WriteLine("1- Barco P longitud " + barcoP.Length);
-            Console.WriteLine("2- Barco M longitud " + barcoM.Length);
-            Console.WriteLine("3- Barco T longitud " + barcoT.Length);
-            Console.WriteLine("4- Barco R longitud " + barcoR.Length);
+           
 
-            Console.WriteLine("Elije el barco que quieres con el numero del menu.");
-            for(int i = 1; i <= 4; i++) { 
+            
+            for(int i = 1; i <= 4; i++) {
+
+                Console.Clear();
+
+                Console.WriteLine("barcos disponibles");
+                Console.WriteLine("1- Barco P longitud " + barcoP.Length);
+                Console.WriteLine("2- Barco M longitud " + barcoM.Length);
+                Console.WriteLine("3- Barco T longitud " + barcoT.Length);
+                Console.WriteLine("4- Barco R longitud " + barcoR.Length);
+                Console.WriteLine("Elije el barco que quieres con el numero del menu.");
+
                 switch (int.Parse(Console.ReadLine()))
                 {
 
@@ -134,33 +140,36 @@ namespace HundirLaFlota
                 String cordenada = Console.ReadLine();
                 char[] cordenadaCh = cordenada.ToArray();
 
-                
+                if (cordenadaCh.Length == 3)
+                {
+                    corB = 10;
+                }
+                else
+                {
+
+                    corB = int.Parse(cordenada.Substring(1));
+
+                }
+
+
 
                 if (vertical == true & horizontal == false)
                 {
 
-                    if (cordenadaCh.Length == 3)
-                    {
-                        corB = 10;
-                    }
-                    else{
-
-                        corB = int.Parse(cordenada.Substring(1));
-                        
-                    }
+                    
 
                     Console.WriteLine("Quieres que se ponga hacia arriba o hacia abajo");
                     
                     if(Console.ReadLine() == "arriba")
                     {
 
-                        for(int t = 0; t < 8; t++)
+                        for(int t = 0; t < 7; t++)
                         {
                             
                             if(cordenadaCh[0].Equals(letras[t]))
                             {
 
-                                if (((t+1) - barcoSE.Length) >= 0)
+                                if (((t + 1) - barcoSE.Length) >= 0)
                                 {
                                     tablero[corB, (t + 2)] = barcoSE[0];
 
@@ -168,20 +177,28 @@ namespace HundirLaFlota
                                     {
                                         int p = (t+2) - u;
 
-                                        tablero[corB, p] = barcoSE[u];
+                                        tablero[corB, p ] = barcoSE[u];
                                         
                                     }
-                                    
 
+                                    t = 8;
                                 }
                                 else
                                 {
 
+                                    Console.WriteLine("El barco no cabe por favor cambia tus parametros");
+
+                                    t = 8;
                                 }
 
                             }
                             else
                             {
+
+
+                                
+
+
 
                             }
 
@@ -191,16 +208,114 @@ namespace HundirLaFlota
                     else
                     {
 
+                        for (int y = 0; y < 8; y++)
+                        {
+                            if (cordenadaCh[0].Equals(letras[y]))
+                            {
+
+                               if (((y + 2) + barcoSE.Length) <= 8)
+                                {
+
+                                    tablero[corB, (y + 2)] = barcoSE[0];
+
+                                    for (int u = 1; u <= (barcoSE.Length - 1); u++)
+                                    {
+                                        int p = (y + 2) + u;
+
+                                        tablero[corB, p ] = barcoSE[u];
+
+                                    }
+
+                                    y = 9;
+                                }
+
+
+                            }
+                            else
+                            {
+                                
+
+                            }
+
+
+
+
+                        }
+
+
+
+
+
                     }
 
                 }
                 else
                 {
-                    Console.WriteLine("Quieres que se ponga hacia la derecha o hacia abajo");
+                    Console.WriteLine("Quieres que se ponga hacia la derecha o hacia la izquierda");
 
                     if (Console.ReadLine() == "derecha")
                     {
 
+                        for (int m = 0; m < 8; m++)
+                        {
+                            if (cordenadaCh[0].Equals(letras[m]))
+                            {
+
+                                if (((corB -1) + barcoSE.Length) <= 10)
+                                {
+
+                                    tablero[corB, (m + 2)] = barcoSE[0];
+
+                                    for (int o = 1; o <= (barcoSE.Length - 1); o++)
+                                    {
+                                        int ñ = (corB) + o;
+
+                                        tablero[ñ, (m + 2)] = barcoSE[o];
+
+                                    }
+
+                                    m = 9;
+                                }
+
+                                for (int q = 0; q < 7; i++)
+                                {
+
+                                    for (int w = 0; w < 10; w++)
+                                    {
+                                        //dado que el char en el matriz se ha representado en un numero se crea un if para representarlo.
+                                        
+                                            //si no es el numero 120 se muestra el numero que ocupa.
+                                            Console.Write(" " + char.ToString(tablero[w, q]) + " ");
+
+                                        
+
+
+
+                                    }
+
+
+
+                                    Console.WriteLine();
+                                }
+
+
+                                Console.ReadLine();
+
+
+
+
+
+                            }
+                            else
+                            {
+                                
+
+                            }
+
+
+
+
+                        }
                     }
                     else
                     {
@@ -211,6 +326,8 @@ namespace HundirLaFlota
                 
 
             }
+
+            Console.WriteLine("se acabo");
 
         }
     }
