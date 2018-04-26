@@ -277,31 +277,7 @@ namespace HundirLaFlota
                                     m = 9;
                                 }
 
-                                for (int q = 0; q < 7; i++)
-                                {
-
-                                    for (int w = 0; w < 10; w++)
-                                    {
-                                        //dado que el char en el matriz se ha representado en un numero se crea un if para representarlo.
-                                        
-                                            //si no es el numero 120 se muestra el numero que ocupa.
-                                            Console.Write(" " + char.ToString(tablero[w, q]) + " ");
-
-                                        
-
-
-
-                                    }
-
-
-
-                                    Console.WriteLine();
-                                }
-
-
-                                Console.ReadLine();
-
-
+                      
 
 
 
