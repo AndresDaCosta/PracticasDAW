@@ -156,29 +156,29 @@ namespace HundirLaFlota
                 if (vertical == true & horizontal == false)
                 {
 
-                    
+
 
                     Console.WriteLine("Quieres que se ponga hacia arriba o hacia abajo");
-                    
-                    if(Console.ReadLine() == "arriba")
+
+                    if (Console.ReadLine() == "arriba")
                     {
 
-                        for(int t = 0; t < 7; t++)
+                        for (int t = 0; t < 7; t++)
                         {
-                            
-                            if(cordenadaCh[0].Equals(letras[t]))
+
+                            if (cordenadaCh[0].Equals(letras[t]))
                             {
 
                                 if (((t + 1) - barcoSE.Length) >= 0)
                                 {
-                                    tablero[corB, (t + 2)] = barcoSE[0];
+                                    tablero[corB, (t + 1)] = barcoSE[0];
 
-                                    for(int u = 1; u <= (barcoSE.Length - 1); u++)
+                                    for (int u = 1; u <= (barcoSE.Length - 1); u++)
                                     {
-                                        int p = (t+2) - u;
+                                        int p = (t + 1) - u;
 
-                                        tablero[corB, p ] = barcoSE[u];
-                                        
+                                        tablero[corB, p] = barcoSE[u];
+
                                     }
 
                                     t = 8;
@@ -196,7 +196,7 @@ namespace HundirLaFlota
                             {
 
 
-                                
+
 
 
 
@@ -213,16 +213,16 @@ namespace HundirLaFlota
                             if (cordenadaCh[0].Equals(letras[y]))
                             {
 
-                               if (((y + 2) + barcoSE.Length) <= 8)
+                                if (((y + 1) + barcoSE.Length) <= 8)
                                 {
 
-                                    tablero[corB, (y + 2)] = barcoSE[0];
+                                    tablero[corB, (y + 1)] = barcoSE[0];
 
                                     for (int u = 1; u <= (barcoSE.Length - 1); u++)
                                     {
-                                        int p = (y + 2) + u;
+                                        int p = (y + 1) + u;
 
-                                        tablero[corB, p ] = barcoSE[u];
+                                        tablero[corB, p] = barcoSE[u];
 
                                     }
 
@@ -233,7 +233,7 @@ namespace HundirLaFlota
                             }
                             else
                             {
-                                
+
 
                             }
 
@@ -261,30 +261,30 @@ namespace HundirLaFlota
                             if (cordenadaCh[0].Equals(letras[m]))
                             {
 
-                                if (((corB -1) + barcoSE.Length) <= 10)
+                                if (((corB - 1) + barcoSE.Length) <= 10)
                                 {
 
-                                    tablero[corB, (m + 2)] = barcoSE[0];
+                                    tablero[corB, (m + 1)] = barcoSE[0];
 
                                     for (int o = 1; o <= (barcoSE.Length - 1); o++)
                                     {
                                         int ñ = (corB) + o;
 
-                                        tablero[ñ, (m + 2)] = barcoSE[o];
+                                        tablero[ñ, (m + 1)] = barcoSE[o];
 
                                     }
 
                                     m = 9;
                                 }
 
-                      
+
 
 
 
                             }
                             else
                             {
-                                
+
 
                             }
 
@@ -295,7 +295,44 @@ namespace HundirLaFlota
                     }
                     else
                     {
+                        for (int l = 0; l < 8; l++)
+                        {
+                            if (cordenadaCh[0].Equals(letras[l]))
+                            {
 
+                                if (((corB ) - barcoSE.Length) >= 0)
+                                {
+
+                                    tablero[corB, (l + 1)] = barcoSE[0];
+
+                                    for (int v = 1; v <= (barcoSE.Length - 1); v++)
+                                    {
+                                        int ñ = (corB) - v;
+
+                                        tablero[ñ, (l + 1)] = barcoSE[v];
+
+                                    }
+
+                                    l = 9;
+                                }
+
+
+
+
+
+                            }
+                            else
+                            {
+
+
+                            }
+
+
+
+
+
+
+                        }
                     }
                 }
                
@@ -303,7 +340,30 @@ namespace HundirLaFlota
 
             }
 
-            Console.WriteLine("se acabo");
+            Console.WriteLine("Muy bien Jugador 1, has colocado todos los barcos. AHORA ES EL TURNO DEL ATACANTE. pulsa cualquier tecla para que empiece el juego");
+            Console.Read();
+            Console.Clear();
+
+            int contador = 0;
+            Boolean barco2 = false;
+            Boolean barco3 = false;
+            Boolean barco4 = false;
+            Boolean barco5 = false;
+
+            do
+            {
+
+             
+
+
+
+
+
+
+
+            } while (contador == 40 | barco2 == true & barco3 == true & barco4 == true & barco5 == true);
+
+            
 
         }
     }
