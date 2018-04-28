@@ -412,6 +412,7 @@ namespace HundirLaFlota
                                         Console.WriteLine("barco Tocado");
 
                                     }
+                                    d = 8;
 
                                     break;
 
@@ -436,6 +437,7 @@ namespace HundirLaFlota
                                         Console.WriteLine("barco Tocado");
 
                                     }
+                                    d = 8;
                                     break;
 
                                 case 'T':
@@ -459,7 +461,7 @@ namespace HundirLaFlota
                                         Console.WriteLine("barco Tocado");
 
                                     }
-
+                                    d = 8;
                                     break;
 
                                 case 'R':
@@ -483,7 +485,7 @@ namespace HundirLaFlota
                                         Console.WriteLine("barco Tocado");
 
                                     }
-
+                                    d = 8;
                                     break;
 
 
@@ -529,7 +531,7 @@ namespace HundirLaFlota
 
 
 
-            } while (contador == 40 | barco2 == true & barco3 == true & barco4 == true & barco5 == true);
+            } while (contador != 40 | barco2 != true & barco3 != true & barco4 != true & barco5 != true);
 
             if(contador == 40)
             {
