@@ -89,13 +89,14 @@ namespace HundirLaFlota
             Console.WriteLine("Jugador 1 (ATACADO) por favor pulsa ENTER para continuar");
             Console.ReadLine();
             Console.Clear();
-            
-            /*procedemos a marcar los barcos*/
-            
-           
 
-            
-            for(int i = 1; i <= 4; i++) {
+            /*procedemos a marcar los barcos*/
+
+
+
+
+            do
+            {
 
                 Console.Clear();
 
@@ -112,26 +113,30 @@ namespace HundirLaFlota
                     case 1:
                         Console.WriteLine("has elejido el barco P con longitud " + barcoP.Length);
                         barcoSE = barcoP;
+                        barco5 = true;
                         break;
                     case 2:
                         Console.WriteLine("has elejido el barco M con longitud " + barcoM.Length);
                         barcoSE = barcoP;
+                        barco4 = true;
                         break;
                     case 3:
                         Console.WriteLine("has elejido el barco T con longitud " + barcoT.Length);
                         barcoSE = barcoT;
+                        barco3 = true;
                         break;
                     case 4:
                         Console.WriteLine("has elejido el barco R con longitud " + barcoR.Length);
                         barcoSE = barcoR;
+                        barco2 = true;
                         break;
 
                 }
-                
+
                 Console.WriteLine("Como lo quieres poner Vertical o Horizontal ?");
                 String option = Console.ReadLine();
 
-                if(option == "vertical")
+                if (option == "vertical")
                 {
                     vertical = true;
                 }
@@ -238,7 +243,9 @@ namespace HundirLaFlota
                             }
                             else
                             {
+                                Console.WriteLine("El barco no cabe por favor cambia tus parametros");
 
+                                y = 8;
 
                             }
 
@@ -289,7 +296,9 @@ namespace HundirLaFlota
                             }
                             else
                             {
+                                Console.WriteLine("El barco no cabe por favor cambia tus parametros");
 
+                                m = 8;
 
                             }
 
@@ -305,7 +314,7 @@ namespace HundirLaFlota
                             if (cordenadaCh[0].Equals(letras[l]))
                             {
 
-                                if (((corB ) - barcoSE.Length) >= 0)
+                                if (((corB) - barcoSE.Length) >= 0)
                                 {
 
                                     tablero[corB, (l + 1)] = barcoSE[0];
@@ -328,7 +337,9 @@ namespace HundirLaFlota
                             }
                             else
                             {
+                                Console.WriteLine("El barco no cabe por favor cambia tus parametros");
 
+                               l = 8;
 
                             }
 
@@ -340,10 +351,10 @@ namespace HundirLaFlota
                         }
                     }
                 }
-               
-                
 
-            }
+
+
+            } while (barco2 != true & barco3 != true & barco4 != true & barco5 != true);
 
             Console.WriteLine("Muy bien Jugador 1, has colocado todos los barcos. AHORA ES EL TURNO DEL ATACANTE. pulsa cualquier tecla para que empiece el juego");
             Console.ReadLine();
@@ -424,7 +435,7 @@ namespace HundirLaFlota
                                     tmp.RemoveAt(numIdx);
                                     barcoM = tmp.ToArray();
 
-                                    if (barcoP.Length == 0)
+                                    if (barcoM.Length == 0)
                                     {
 
                                         barco4 = true;
@@ -448,7 +459,7 @@ namespace HundirLaFlota
                                     tmp.RemoveAt(numIdx);
                                     barcoT = tmp.ToArray();
 
-                                    if (barcoP.Length == 0)
+                                    if (barcoT.Length == 0)
                                     {
 
                                         barco3 = true;
@@ -472,7 +483,7 @@ namespace HundirLaFlota
                                     tmp.RemoveAt(numIdx);
                                     barcoR = tmp.ToArray();
 
-                                    if (barcoP.Length == 0)
+                                    if (barcoR.Length == 0)
                                     {
 
                                         barco2 = true;
@@ -515,6 +526,7 @@ namespace HundirLaFlota
                     else
                     {
 
+                        Console.WriteLine("no se encuentra la cordenada que buscas, por favor vuelve a intentarlo.");
 
 
                     }
