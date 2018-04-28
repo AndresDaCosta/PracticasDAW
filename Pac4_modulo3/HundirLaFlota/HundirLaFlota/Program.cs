@@ -19,6 +19,7 @@ namespace HundirLaFlota
             char[] letras = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' };
             int count = 0;
             int corB = 0;
+            int corBa = 0;
             /*barcos*/
             /*longitud 5*/
             char[] barcoP = { 'P', 'P', 'P', 'P', 'P' };
@@ -34,9 +35,13 @@ namespace HundirLaFlota
             Boolean horizontal = new Boolean();
             Boolean arriba = new Boolean();
             Boolean derecha = new Boolean();
-
+            Boolean barco2 = false;
+            Boolean barco3 = false;
+            Boolean barco4 = false;
+            Boolean barco5 = false;
+            int contador = 0;
             /*Output de la primera impresion */
-          
+
             for ( int i = 0; i <= 7; i++)
             {
                 
@@ -341,20 +346,183 @@ namespace HundirLaFlota
             }
 
             Console.WriteLine("Muy bien Jugador 1, has colocado todos los barcos. AHORA ES EL TURNO DEL ATACANTE. pulsa cualquier tecla para que empiece el juego");
-            Console.Read();
+            Console.ReadLine();
             Console.Clear();
 
-            int contador = 0;
-            Boolean barco2 = false;
-            Boolean barco3 = false;
-            Boolean barco4 = false;
-            Boolean barco5 = false;
+            
+
 
             do
             {
 
-             
+                Console.WriteLine("Indica la cordenada para disparar");
 
+                String CordenadaAt = Console.ReadLine();
+                char[] CordenadaCh = CordenadaAt.ToCharArray();
+
+                if (CordenadaCh.Length == 3)
+                {
+                   corBa = 10;
+                }
+                else
+                {
+
+                    corBa = int.Parse(CordenadaAt.Substring(1));
+
+                }
+
+
+
+
+                for (int d = 0; d < 7; d++)
+                {
+                    
+
+
+                    if (CordenadaCh[0].Equals(letras[d]))
+                    {
+                       
+                        int eje = d + 1;
+
+                        if (tablero[corBa, eje] != '\0')
+                        {
+
+                            switch(tablero[corBa, eje])
+                            {
+
+                                case 'P':
+
+                                     
+                                    char charToremove = 'P';
+                                    int numIdx = Array.IndexOf(barcoP, charToremove);
+                                    List<char> tmp = new List<char>(barcoP);
+                                    tmp.RemoveAt(numIdx);
+                                    barcoP = tmp.ToArray();
+                                    
+                                    if(barcoP.Length == 0)
+                                    {
+
+                                        barco5 = true;
+
+                                        Console.WriteLine("Tocado y hundido el barco P con 5 unidades");
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("barco Tocado");
+
+                                    }
+
+                                    break;
+
+                                case 'M':
+
+                                    charToremove = 'M';
+                                    numIdx = Array.IndexOf(barcoM, charToremove);
+                                    tmp = new List<char>(barcoM);
+                                    tmp.RemoveAt(numIdx);
+                                    barcoM = tmp.ToArray();
+
+                                    if (barcoP.Length == 0)
+                                    {
+
+                                        barco4 = true;
+
+                                        Console.WriteLine("Tocado y hundido el barco M con 4 unidades");
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("barco Tocado");
+
+                                    }
+                                    break;
+
+                                case 'T':
+
+                                    charToremove = 'T';
+                                    numIdx = Array.IndexOf(barcoT, charToremove);
+                                    tmp = new List<char>(barcoT);
+                                    tmp.RemoveAt(numIdx);
+                                    barcoT = tmp.ToArray();
+
+                                    if (barcoP.Length == 0)
+                                    {
+
+                                        barco3 = true;
+
+                                        Console.WriteLine("Tocado y hundido el barco T con 3 unidades");
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("barco Tocado");
+
+                                    }
+
+                                    break;
+
+                                case 'R':
+
+                                    charToremove = 'R';
+                                    numIdx = Array.IndexOf(barcoR, charToremove);
+                                    tmp = new List<char>(barcoR);
+                                    tmp.RemoveAt(numIdx);
+                                    barcoR = tmp.ToArray();
+
+                                    if (barcoP.Length == 0)
+                                    {
+
+                                        barco2 = true;
+
+                                        Console.WriteLine("Tocado y hundido el barco R con 2 unidades");
+
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("barco Tocado");
+
+                                    }
+
+                                    break;
+
+
+
+                                    
+
+
+                            }
+
+                            contador++;
+
+                        }
+                        else
+                        {
+
+
+                            Console.WriteLine("Tu disparo se ha ido al agua");
+
+                            contador++;
+
+
+                        }
+
+
+
+                    }
+                    else
+                    {
+
+
+
+                    }
+
+
+
+
+
+
+                }
 
 
 
@@ -363,7 +531,24 @@ namespace HundirLaFlota
 
             } while (contador == 40 | barco2 == true & barco3 == true & barco4 == true & barco5 == true);
 
-            
+            if(contador == 40)
+            {
+
+                Console.WriteLine(" se acabo el juego no has conseguido undir los barcos");
+
+
+            }
+            else
+            {
+
+                Console.WriteLine(" Muy Bien has consegui Hundir todos los Barcos has GANADO");
+
+
+            }
+
+
+            Console.WriteLine("Pulsa cualquier tecla para cerrar el programa");
+            Console.ReadLine();
 
         }
     }
