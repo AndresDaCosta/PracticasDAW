@@ -116,7 +116,7 @@ namespace HundirLaFlota
 
                     case 1:
 
-                        if(barco5 = true){
+                        if(barco5 == true){
 
                             //barco ya seleccionado no se puede seleccionar el mismo barco 2 veces
                             Console.WriteLine("barco ya registrado, por favor selecciona otro");
@@ -138,7 +138,7 @@ namespace HundirLaFlota
                         break;
 
                     case 2:
-                        if (barco4 = true){
+                        if (barco4 == true){
 
                             //barco ya seleccionado no se puede seleccionar el mismo barco 2 veces
                             Console.WriteLine("barco ya registrado, por favor selecciona otro");
@@ -158,7 +158,7 @@ namespace HundirLaFlota
                         break;
                     case 3:
 
-                        if (barco3 = true)
+                        if (barco3 == true)
                         {
                             //barco ya seleccionado no se puede seleccionar el mismo barco 2 veces
                             Console.WriteLine("barco ya registrado, por favor selecciona otro");
@@ -178,7 +178,7 @@ namespace HundirLaFlota
                     case 4:
 
 
-                        if (barco2 = true)
+                        if (barco2 == true)
                         {
                             //barco ya seleccionado no se puede seleccionar el mismo barco 2 veces
                             Console.WriteLine("barco ya registrado, por favor selecciona otro");
