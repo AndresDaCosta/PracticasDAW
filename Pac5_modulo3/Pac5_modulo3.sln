@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numeros_aleatorios", "Pac5_modulo3\Numeros_aleatorios.csproj", "{8F99A1AC-81C5-4FDC-9125-E0E1A447C5C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperatura", "Temperatura\Temperatura.csproj", "{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8F99A1AC-81C5-4FDC-9125-E0E1A447C5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F99A1AC-81C5-4FDC-9125-E0E1A447C5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F99A1AC-81C5-4FDC-9125-E0E1A447C5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
