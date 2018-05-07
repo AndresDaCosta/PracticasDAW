@@ -42,7 +42,7 @@ namespace Temperatura
 
             int[] Nums_temps = new int[5];
 
-            for(int i = 0; i <= array.Length; i++)
+            for(int i = 0; i < array.Length; i++)
             {
 
                 String temperatura = array[i];

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numeros_aleatorios", "Pac5_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temperatura", "Temperatura\Temperatura.csproj", "{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parcelas", "Parcelas\Parcelas.csproj", "{8F85E681-23A9-47C6-A272-B79A08B68F9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D16B7E1-3AE9-4386-8E1E-9241EA9CDFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F85E681-23A9-47C6-A272-B79A08B68F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F85E681-23A9-47C6-A272-B79A08B68F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F85E681-23A9-47C6-A272-B79A08B68F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F85E681-23A9-47C6-A272-B79A08B68F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
