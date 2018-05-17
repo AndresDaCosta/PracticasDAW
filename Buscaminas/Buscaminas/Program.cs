@@ -111,7 +111,7 @@ namespace Buscaminas
             int numero2 = int.Parse(cordenada.Substring(index_com + 1));
             Boolean mina = false;
 
-            if (tablero[(numero + 1), (numero2 + 1)] == '*')
+            if (tablero[numero , (numero2 + 1)] == '*')
             {
 
                 mina = true;
