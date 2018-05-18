@@ -26,9 +26,9 @@ namespace Buscaminas
             Minado(ref Tableros);
             Console.Clear();
             Tablero(Tableros);
-            Boolean mina = jugar(out string cordenada, ref Tableros);
+            Boolean mina = jugar(out string cordenada, out int numero, out int numero2, ref Tableros);
             Console.ReadLine();
-
+            Scanner(numero, numero2);
 
         }
         static void Tablero(char[,] Tablero)
@@ -93,22 +93,23 @@ namespace Buscaminas
                 Tablero[(NumeroX + 1), (NumeroY + 1)] = '*';
 
             }
-               
+
+            Console.WriteLine("se han introducido el minado");
                    
 
 
         }
 
         // funcion para 
-        static Boolean jugar(out string cordenada, ref char[,] tablero)
+        static Boolean jugar(out string cordenada, out int numero, out int numero2, ref char[,] tablero)
         {
             Console.WriteLine("seleccione una coordenada para destapar");
             cordenada = Console.ReadLine();
 
             int index_com = cordenada.IndexOf(',');
 
-            int numero = int.Parse(cordenada.Substring(0, index_com));
-            int numero2 = int.Parse(cordenada.Substring(index_com + 1));
+             numero = int.Parse(cordenada.Substring(0, index_com));
+             numero2 = int.Parse(cordenada.Substring(index_com + 1));
             Boolean mina = false;
 
             if (tablero[numero , (numero2 + 1)] == '*')
@@ -128,8 +129,18 @@ namespace Buscaminas
         }
 
         // funcion para escanear el tablero
-        static void Scanner()
+        static void Scanner(int numero, int numero2)
         {
+
+            string[] colindan = {numero + "," + numero2,
+                                 numero + "," + numero2,
+                                 numero + "," + numero2,
+                                 numero + "," + numero2,
+                                 numero + "," + numero2,
+                                 numero + "," + numero2,};
+
+
+
 
 
 
