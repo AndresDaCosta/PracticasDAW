@@ -28,7 +28,7 @@ namespace Buscaminas
             Tablero(Tableros);
             Boolean mina = jugar(out string cordenada, out int numero, out int numero2, ref Tableros);
             Console.ReadLine();
-            Scanner(numero, numero2);
+           
 
         }
         static void Tablero(char[,] Tablero)
@@ -105,19 +105,30 @@ namespace Buscaminas
         {
             Console.WriteLine("seleccione una coordenada para destapar");
             cordenada = Console.ReadLine();
+            int contador = 0;
 
             int index_com = cordenada.IndexOf(',');
+
+            
 
              numero = int.Parse(cordenada.Substring(0, index_com));
              numero2 = int.Parse(cordenada.Substring(index_com + 1));
             Boolean mina = false;
 
-            if (tablero[numero , (numero2 + 1)] == '*')
+
+
+            if (tablero[numero , (numero2 + 1)] != '*')
             {
 
-                mina = true;
+                Scanner(numero, numero2, ref tablero);
 
-                Console.WriteLine("se ha encontardo una mina");
+
+            }
+            else
+            {
+
+                Console.WriteLine("Se ha encontrado una mina ! HAS PERDIDO !");
+
 
             }
 
@@ -129,23 +140,71 @@ namespace Buscaminas
         }
 
         // funcion para escanear el tablero
-        static void Scanner(int numero, int numero2)
+        static void Scanner(int numero, int numero2,  ref char[,] tablero)
         {
+            
+            int contador = 0;
 
-            string[] colindan = {numero + "," + numero2,
-                                 numero + "," + numero2,
-                                 numero + "," + numero2,
-                                 numero + "," + numero2,
-                                 numero + "," + numero2,
-                                 numero + "," + numero2,};
+            Esbomba((numero + 1), (numero2 + 1), ref contador, ref tablero);
+            Esbomba((numero + 1), numero2, ref contador, ref tablero);
+            Esbomba((numero + 1), (numero2 - 1), ref contador, ref tablero);
+            Esbomba(numero, (numero2 - 1), ref contador, ref tablero);
+            Esbomba((numero - 1), (numero2 - 1), ref contador, ref tablero);
+            Esbomba((numero - 1), numero2, ref contador, ref tablero);
+            Esbomba((numero - 1), (numero2 + 1), ref contador, ref tablero);
+
+          if(contador == 0)
+            {
+                tablero[(numero + 1), (numero2 + 1)] = 'B';
+                tablero[(numero + 1), numero2] = 'B';
+                tablero[numero, (numero2 - 1)] = 'B';
+                tablero[(numero - 1), (numero2 - 1)] = 'B';
+                tablero[(numero - 1), numero2] = 'B';
+                tablero[(numero - 1), (numero2 + 1)] = 'B';
 
 
+                Scanner((numero + 1), (numero2 + 1), ref tablero);
+                Scanner((numero + 1), numero2, ref tablero);
+                Scanner(numero , (numero2 - 1), ref tablero);
+                Scanner((numero - 1), (numero2 - 1), ref tablero);
+                Scanner((numero - 1), numero2 , ref tablero);
+                Scanner((numero - 1), (numero2 + 1), ref tablero);
 
+
+            }
+            else
+            {
+
+                Console.WriteLine("hay " + contador + " bombas alrededor de la casilla que has sseleccionado");
+                
+
+            }
 
 
 
         }
+        static void Esbomba(int ejeX, int ejeY, ref int contador, ref char [,] tablero)
+        {
 
+
+            if (tablero[ejeX, (ejeY + 1) ] == '*')
+            {
+
+                contador++;
+
+               
+
+            }
+            else
+            {
+
+
+
+            }
+
+
+            
+        }
 
     }
 }
