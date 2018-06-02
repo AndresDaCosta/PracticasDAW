@@ -1,5 +1,3 @@
-Tortilla de patata:huevo,patata,cebolla
-Gambas al ajillo:gambas,ajo,aceite
 Macarrones con carne:macarrones,carne picada,cebolla
 Rissotto de setas:arroz,nata,setas
 Tarta de manzana:hojaldre,manzana,azúcar

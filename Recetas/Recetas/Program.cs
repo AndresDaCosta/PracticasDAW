@@ -27,10 +27,10 @@ namespace Recetas
 
             Console.WriteLine("introduce los ingredientes separados por comas:  ");
 
-            String Ingredientes = Console.ReadLine();
+             String Ingredientes = " " + Console.ReadLine();
 
 
-            Normalice(Ingredientes);
+            Ingredi = Normalice(Ingredientes);
 
         }
         static String[] Normalice( String In)
@@ -51,16 +51,74 @@ namespace Recetas
         {
             String path = @"C:\Users\612072594\Documents\formacion\Grado supeior\Recetas\Recetas\recetas.txt";
 
-            FileStream Connect = new FileStream(path, FileMode.Open);
+            String line;
 
-            BinaryReader ConnectBinario = new BinaryReader(Connect, Encoding.UTF8);
+            StreamReader Read = new StreamReader(path);
 
-            String result = ConnectBinario.ReadString();
+            while((line = Read.ReadLine()) != null)
+            {
+                int positivo = new int();
 
-            Console.ReadLine();
+                String[] Divide = line.Split(':');
+
+                Divide[0] = "";
+
+                String temp = String.Join(" ", Divide);
+
+                Divide = temp.Split(',');
+
+                for (int x = 0; x < Lista.Length; x++)
+                {
+
+                    if(Array.IndexOf(Divide, Lista[x]) >= 0)
+                    {
+
+                        positivo++;
 
 
+                    }
+                    else
+                    {
 
+
+                    }
+
+
+                }
+
+
+                if (positivo  == Divide.Length)
+                {
+
+                    Console.WriteLine("se ha ejecutado correctamente");
+
+                    Write(line);
+                }
+                else
+                {
+
+                }
+
+
+            }
+
+
+            Read.Close();
+
+
+        }
+        static  void Write( String Line )
+        {
+            String path = @"C:\Users\612072594\Documents\formacion\Grado supeior\Recetas\Recetas\posibles.txt";
+
+            StreamWriter Write = File.CreateText(path);
+
+
+            Write.WriteLine(Line);
+
+            Write.Close();
+
+            
 
         }
        
