@@ -9,19 +9,26 @@ namespace Recetas
 {
     class Program
     {
+
         static void Main(string[] args)
         {
 
             /*programa de las recetas*/
 
+
+            /*se crea un array de tipo string para  los ingredientes que introduce el ussuario*/
             String[] Ingredi = new String[10];
- 
+            
+            /*llamamos a la funcion introduce paa que el usuario introduzca  los ingredientes*/
             Introduce(ref Ingredi);
 
+            //comparamos los ingredientes que nos pasa el usuario.
             compare(Ingredi);
 
 
         }
+
+        //funcion que solicita al usuario los ingredientes
         static void Introduce(ref String [] Ingredi)
         {
 
@@ -118,7 +125,7 @@ namespace Recetas
 
             Write.Close();
 
-            
+            Console.WriteLine("Se ha escrito las posibles recetas en en archivo ")
 
         }
        
