@@ -14,7 +14,7 @@ namespace Recetas
         {
 
             /*programa de las recetas*/
-
+            
 
             /*se crea un array de tipo string para  los ingredientes que introduce el ussuario*/
             String[] Ingredi = new String[10];
@@ -31,34 +31,34 @@ namespace Recetas
         //funcion que solicita al usuario los ingredientes
         static void Introduce(ref String [] Ingredi)
         {
-
+            //pedimos al usuario que nos indique los ingredientes
             Console.WriteLine("introduce los ingredientes separados por comas:  ");
 
+            //guradamos los ingrdientes en un String
              String Ingredientes = " " + Console.ReadLine();
 
-
+            //llamamos a la funcion normalice para separarar idividualmente los ingredientes
             Ingredi = Normalice(Ingredientes);
 
         }
+        //funcion normaliced lo que hace es divbidir los ingredientes separados por comas y meterlos en un ARRAY de string 
+        //se pasa por parametro los ingredientes que el usuario a introducido en  el programa
         static String[] Normalice( String In)
         {
 
-            int index = new int();
-
-            
-
+            //con los ingredientes se hace un array de tipo String para meter los ingredientes con un split por la coma
             String[] InNormaliced = In.Split(',');
 
-            Console.ReadLine();
-
+            //devolvemos  el array creado 
             return InNormaliced;
 
         }
+        //la funcion compare los ue hace es comparar los ingredientes que ha introducido el usuario con los de la lista del archivo guardado.
         static void compare(String [] Lista)
         {
-            String path = @"C:\Users\612072594\Documents\formacion\Grado supeior\Recetas\Recetas\recetas.txt";
+            String path = ReadPaths();
 
-            String line;
+            String line; 
 
             StreamReader Read = new StreamReader(path);
 
@@ -116,7 +116,7 @@ namespace Recetas
         }
         static  void Write( String Line )
         {
-            String path = @"C:\Users\612072594\Documents\formacion\Grado supeior\Recetas\Recetas\posibles.txt";
+            String path = WritePaths();
 
             StreamWriter Write = File.CreateText(path);
 
@@ -125,10 +125,23 @@ namespace Recetas
 
             Write.Close();
 
-            Console.WriteLine("Se ha escrito las posibles recetas en en archivo ")
+            Console.WriteLine("Se ha escrito las posibles recetas en en archivo ");
 
         }
-       
+        static String WritePaths()
+        {
+
+            String path = @"..\Recetas\posibles.txt";
+
+            return path;
+        }
+        static String ReadPaths()
+        {
+
+            String path = @"..\Recetas\recetas.txt";
+
+            return path;
+        }
 
     }
 }
