@@ -27,10 +27,13 @@ namespace Buscaminas
             Console.Clear();
             Tablero(Tableros);
             Boolean mina = jugar(out string cordenada, out int numero, out int numero2, ref Tableros);
-            Console.ReadLine();
+
+          
+
            
 
         }
+        // cargamos el tablero
         static void Tablero(char[,] Tablero)
         {
             for (int i = 0; i <= 10; i++)
@@ -103,38 +106,43 @@ namespace Buscaminas
         // funcion para 
         static Boolean jugar(out string cordenada, out int numero, out int numero2, ref char[,] tablero)
         {
-            Console.WriteLine("seleccione una coordenada para destapar");
-            cordenada = Console.ReadLine();
-            int contador = 0;
-
-            int index_com = cordenada.IndexOf(',');
-
-            
-
-             numero = int.Parse(cordenada.Substring(0, index_com));
-             numero2 = int.Parse(cordenada.Substring(index_com + 1));
             Boolean mina = false;
+            do {
+                Console.WriteLine("seleccione una coordenada para destapar primero las columnas y despues la fila x,x");
+                cordenada = Console.ReadLine();
+                int contador = 0;
+
+                int index_com = cordenada.IndexOf(',');
 
 
-
-            if (tablero[numero , (numero2 + 1)] != '*')
-            {
-
-                Scanner(numero, numero2, ref tablero);
-
-
-            }
-            else
-            {
-
-                Console.WriteLine("Se ha encontrado una mina ! HAS PERDIDO !");
+                // se convierte el string de la coordenada 
+                numero = int.Parse(cordenada.Substring(0, index_com));
+                numero2 = int.Parse(cordenada.Substring(index_com + 1));
+                
 
 
-            }
+                // si la mina seleccionada no es una bomba
+                if (tablero[numero, (numero2 + 1)] != '*')
+                {
+
+                    // se llama al Scanner
+                    Scanner(numero, numero2, ref tablero);
 
 
-            
+                }
+                else
+                {
 
+
+                    Console.WriteLine("Se ha encontrado una mina ! HAS PERDIDO !");
+
+
+                }
+
+
+                
+
+            } while (mina != true);
 
             return mina;
         }
@@ -142,9 +150,10 @@ namespace Buscaminas
         // funcion para escanear el tablero
         static void Scanner(int numero, int numero2,  ref char[,] tablero)
         {
-            
+            // creamos un conrador de minas
             int contador = 0;
 
+            // se escanea las celdas colindantes
             Esbomba((numero + 1), (numero2 + 1), ref contador, ref tablero);
             Esbomba((numero + 1), numero2, ref contador, ref tablero);
             Esbomba((numero + 1), (numero2 - 1), ref contador, ref tablero);
@@ -153,8 +162,10 @@ namespace Buscaminas
             Esbomba((numero - 1), numero2, ref contador, ref tablero);
             Esbomba((numero - 1), (numero2 + 1), ref contador, ref tablero);
 
+          // si el contador esta vacio es decir que no ha encontrado bombas alrededor
           if(contador == 0)
             {
+                // se sustituye las coordenadas  por una B
                 tablero[(numero + 1), (numero2 + 1)] = 'B';
                 tablero[(numero + 1), numero2] = 'B';
                 tablero[numero, (numero2 - 1)] = 'B';
@@ -162,7 +173,7 @@ namespace Buscaminas
                 tablero[(numero - 1), numero2] = 'B';
                 tablero[(numero - 1), (numero2 + 1)] = 'B';
 
-
+                // despues se vuelve a pasar  el escaner de las coordenadas colindantes para escanear tambien sus alrededores
                 Scanner((numero + 1), (numero2 + 1), ref tablero);
                 Scanner((numero + 1), numero2, ref tablero);
                 Scanner(numero , (numero2 - 1), ref tablero);
@@ -174,7 +185,7 @@ namespace Buscaminas
             }
             else
             {
-
+                //se muestra las bombas que hay alrededor 
                 Console.WriteLine("hay " + contador + " bombas alrededor de la casilla que has sseleccionado");
                 
 
@@ -183,13 +194,14 @@ namespace Buscaminas
 
 
         }
+        //funcion para comparar si la celda es bomba
         static void Esbomba(int ejeX, int ejeY, ref int contador, ref char [,] tablero)
         {
 
-
+            //comparamos la coordenada que se le pasa
             if (tablero[ejeX, (ejeY + 1) ] == '*')
             {
-
+                // si es bomba se aumenta el contador
                 contador++;
 
                
