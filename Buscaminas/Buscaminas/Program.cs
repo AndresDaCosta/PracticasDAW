@@ -20,7 +20,7 @@ namespace Buscaminas
 
             char[,] Tableros = new char[11, 11];
 
-
+            /**/
             
             Tablero(Tableros);
             Minado(ref Tableros);
